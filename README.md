@@ -1,70 +1,123 @@
-# Getting Started with Create React App
+#  Личный учет финансов
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Frontend-приложение для учета личных финансов с визуализацией расходов и доходов. Позволяет пользователям контролировать бюджет, анализировать финансовые привычки и ставить цели для накоплений.
 
-## Available Scripts
+## 🚀 Функциональность
 
-In the project directory, you can run:
+- **🔐 Аутентификация и авторизация**
+  - Регистрация новых пользователей
+  - Вход в систему
+  - Передача данных между страницами
 
-### `npm start`
+- **💳 Управление транзакциями**
+  - Добавление доходов и расходов
+  - Указание категории, даты, суммы и описания
+  - Удаление транзакций
+  - Визуализация в виде таблицы
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **📊 Аналитика и отчетность**
+  - Круговые диаграммы для анализа затрат
+  - Диаграммы соотношения доходов/расходов
+  - Интерактивные графики с использованием Chart.js
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **🎯 Управление финансовыми целями**
+  - Создание целей для накоплений
+  - Отслеживание прогресса
+  - Визуализация целей на диаграмме
 
-### `npm test`
+- **👤 Личный кабинет**
+  - Просмотр и редактирование профиля
+  - Выход из системы
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠 Технологии
 
-### `npm run build`
+- **Frontend:** React 18, JSX
+- **Роутинг:** React Router DOM
+- **Визуализация:** Chart.js, react-chartjs-2
+- **Стилизация:** CSS Modules, CSS3
+- **Иконки:** Font Awesome, React Icons
+- **Тестирование:** Jest, React Testing Library
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📁 Структура проекта
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+src/
+├── components/
+│   ├── authorization.jsx    # Страница авторизации
+│   ├── registration.jsx     # Страница регистрации
+│   ├── start.jsx           # Главная страница
+│   ├── finance.jsx         # Управление затратами
+│   ├── transactions.jsx    # Управление транзакциями
+│   ├── categories.jsx      # Управление накоплениями
+│   └── user.jsx           # Личный кабинет
+├── styles/
+│   ├── aut.css            # Стили авторизации/регистрации
+│   ├── finance.css        # Стили финансов
+│   ├── transactions.css   # Стили транзакций
+│   └── user.css          # Стили профиля
+└── index.js              # Точка входа и роутинг
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Установка и запуск
 
-### `npm run eject`
+1. **Клонирование репозитория**
+```bash
+git clone https://github.com/your-username/finance-tracker.git
+cd finance-tracker
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Установка зависимостей**
+```bash
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **Запуск приложения**
+```bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Приложение будет доступно по адресу: `http://localhost:3000`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📸 Скриншоты интерфейса
 
-## Learn More
+### Главная страница
+- Панель навигации с быстрым доступом к основным разделам
+- Круглое меню для перехода между модулями
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Страница транзакций
+- Таблица с историей операций
+- Форма добавления новых транзакций
+- Интерактивная диаграмма доходов/расходов
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Управление затратами
+- Круговая диаграмма распределения расходов
+- Форма добавления финансовых целей
+- Возможность удаления записей
 
-### Code Splitting
+### Личный кабинет
+- Информация о пользователе
+- Декоративные элементы интерфейса
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🔧 Особенности реализации
 
-### Analyzing the Bundle Size
+- **Компонентный подход:** Все страницы реализованы как функциональные компоненты React
+- **Хуки состояния:** Использование useState для управления локальным состоянием
+- **Навигация:** React Router для клиентской маршрутизации
+- **Валидация форм:** Проверка обязательных полей перед отправкой
+- **Адаптивный дизайн:** Поддержка различных размеров экранов
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📈 Планы по развитию
 
-### Making a Progressive Web App
+- [ ] Добавление редактирования существующих транзакций
+- [ ] Реализация фильтрации и поиска по транзакциям
+- [ ] Добавление категорий для транзакций
+- [ ] Экспорт данных в CSV/PDF
+- [ ] Бэкенд для хранения данных
+- [ ] PWA-функциональность
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## 👨‍💻 Автор
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Разработано как учебный проект для демонстрации навыков фронтенд-разработки на React.
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
