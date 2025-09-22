@@ -1,0 +1,246 @@
+/* Стиль контейнера всей страницы */
+.finance-page-container {
+    /* Линейный градиент фона */
+    background-image: url('https://i.pinimg.com/originals/75/68/fe/7568fe05c14280c63519703ebce5737c.jpg');
+    background-size: cover; /* Изображение растягивается на весь экран */
+    background-position: center; /* Центрируем изображение */
+    background-attachment: fixed; /* Фиксируем изображение при прокрутке */
+    background-repeat: no-repeat; /* Отключаем повторение изображения */
+    /* Цвет текста */
+    color: white;
+    /* Минимальная высота, занимающая весь экран */
+    min-height: 100vh;
+    /* Размещение элементов flex */
+    display: flex;
+    /* Вертикальное расположение элементов */
+    flex-direction: column;
+    /* Выравнивание элементов по центру по горизонтали */
+    align-items: center;
+    /* Отступы */
+    padding: 20px;
+    /* Учёт отступов в размерах элемента */
+    box-sizing: border-box;
+    /* Размытие фона */
+    backdrop-filter: blur(3px);
+    /* Отступ снизу */
+    padding-bottom: 130px;
+    /* Настройка шрифта */
+    font-family: sans-serif;
+   }
+  
+   /* Стиль контейнера контента */
+   .finance-page-content {
+    /* Размещение элементов flex */
+    display: flex;
+    /* Вертикальное расположение элементов на экранах меньшего размера */
+    flex-direction: column;
+    /* Выравнивание элементов по центру по горизонтали */
+    align-items: center;
+    /* Ширина контейнера */
+    width: 80%;
+    /* Максимальная ширина контейнера */
+    max-width: 1000px;
+    /* Автоматические поля */
+    margin: 20px auto;
+    /* Зазор между элементами */
+    gap: 20px;
+   }
+  
+   /* Медиа-запрос для больших экранов */
+   @media (min-width: 768px) { /* Точка останова для переключения макета */
+    /* Горизонтальное расположение элементов на больших экранах */
+    .finance-page-content {
+    flex-direction: row;
+    /* Выравнивание элементов по левому краю */
+    align-items: flex-start;
+    /* Расстояние между формой и графиком */
+    justify-content: space-between;
+    }
+    /* Ширина контейнера формы */
+    .finance-page-form-container {
+    width: 45%;
+    }
+    /* Ширина контейнера графика */
+    .finance-page-chart-container {
+    width: 45%;
+    }
+   }
+  
+   /* Стиль контейнера формы */
+   .finance-page-form-container {
+    max-width: 400px; /* Ограничение максимальной ширины */
+    width: 90%; /* Адаптация под меньшие экраны */
+    padding: 20px; /* Уменьшенные отступы */
+    margin: 20px auto; /* Центрирование и отступы */
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон */
+    border-radius: 10px; /* Скруглённые углы */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Тень */
+    margin-top: 60px;
+   }
+  
+   /* Стиль контейнера графика */
+   .finance-page-chart-container {
+    margin-top: 60px;
+    /* Занимает всю доступную ширину на меньших экранах */
+    width: 100%;
+    /* Высота контейнера */
+    height: 400px;
+   }
+  
+   /* Стиль для полей ввода и кнопок в форме */
+   .finance-page-form-container input,
+   .finance-page-form-container button {
+    /* Ширина элементов, с учётом отступов */
+    width: calc(100% - 20px);
+    /* Отступы сверху и снизу */
+    margin: 10px 0;
+    /* Отступы */
+    padding: 15px;
+    /* Граница */
+    border: none;
+    /* Скругленные углы */
+    border-radius: 5px;
+    /* Цвет фона */
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Учёт отступов в размерах элемента */
+    box-sizing: border-box;
+    /* Размер шрифта */
+    font-size: 16px;
+    /* Добавлено: цвет текста белый */
+    color: white; 
+   }
+  
+   /* Стиль кнопки в форме */
+   .finance-page-form-container button {
+    margin-top: 10px;
+    /* Цвет фона */
+    background-color: rgba(140, 214, 215, 0.6);
+    /* Курсор указывает на кликабельность */
+    cursor: pointer;
+    /* Цвет текста */
+    color: rgb(255, 255, 255);
+   }
+  
+   /* Стиль кнопки "Назад" при наведении */
+   .finance-page-form-container button:hover {
+    /* Цвет фона при наведении */
+    background-color: rgba(103, 213, 140, 0.721);
+   }
+  
+  
+   /* Стиль заголовка */
+   .finance-page-title {
+    /* Позиционирование */
+    position: fixed;
+    /* Расположение сверху */
+    top: 0;
+    /* Расположение слева */
+    left: 0;
+    /* Занимает всю ширину */
+    width: 100%;
+    /* Выравнивание текста по центру */
+    text-align: center;
+    /* Отступы */
+    padding: 10px;
+    /* Цвет фона */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Уровень z-index */
+    z-index: 1;
+    /* Размер шрифта */
+    font-size: 24px;
+   }
+  
+   /* Стиль кнопки "Назад" */
+   .finance-page-back-button {
+    /* Цвет фона */
+    background-color: rgba(140, 214, 215, 0.6);
+    /* Цвет текста */
+    color: white;
+    /* Отступы */
+    padding: 15px 30px;
+    /* Граница */
+    border: none;
+    /* Скругленные углы */
+    border-radius: 10px;
+    /* Курсор указывает на кликабельность */
+    cursor: pointer;
+    /* Отступ снизу */
+    margin-bottom: 20px;
+    /* Размер шрифта */
+    font-size: 18px;
+    /* Анимация */
+    transition: background-color 0.3s ease-in-out;
+   }
+  
+   /* Стиль кнопки "Назад" при наведении */
+   .finance-page-back-button:hover {
+    /* Цвет фона при наведении */
+    background-color: rgba(103, 213, 140, 0.721);
+   }
+
+   /* Контейнер для удаления накоплений */
+.finance-page-delete-container {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.1); /* Лёгкий полупрозрачный фон */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+    color: white; /* Цвет текста */
+    font-size: 16px;
+    line-height: 1.5;
+    
+}
+
+/* Описание выбора */
+.finance-page-delete-container p {
+    margin-bottom: 0px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Выпадающий список */
+.finance-page-delete-select {
+    width: 100%; /* Полная ширина блока */
+    padding: 12px 15px; /* Отступы внутри */
+    margin-bottom: 0px; /* Отступ от кнопки */
+    font-size: 16px; /* Размер шрифта */
+    color: #333; /* Тёмный цвет текста */
+    background-color: #f9f9f9; /* Светлый фон */
+    border: 1px solid #ccc; /* Лёгкая рамка */
+    border-radius: 6px; /* Скруглённые углы */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Внутренняя тень */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Плавный переход */
+}
+
+/* При фокусе на выпадающем списке */
+.finance-page-delete-select:focus {
+    border-color: #007BFF; /* Синяя рамка при фокусе */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Лёгкое свечение */
+    outline: none; /* Убираем стандартный outline */
+}
+
+/* Кнопка удаления */
+.finance-page-delete-button {  
+    padding: 10px 20px; /* Отступы */
+    font-size: 16px; /* Размер шрифта */
+    font-weight: bold; /* Жирный текст */
+    color: white; /* Цвет текста */
+    background-color: #FF6347; /* Красный фон */
+    border: none; /* Без границы */
+    border-radius: 6px; /* Скруглённые углы */
+    cursor: pointer; /* Указатель мыши */
+    transition: background-color 0.3s; /* Плавное изменение фона */
+}
+
+/* Кнопка удаления - наведение */
+.finance-page-delete-button:hover {
+    background-color: #FF4500; /* Более тёмный красный */
+}
+
+/* Кнопка удаления - отключена */
+.finance-page-delete-button:disabled {
+    background-color: #ccc; /* Серый цвет */
+    cursor: not-allowed; /* Неактивный указатель */
+}
+
+    

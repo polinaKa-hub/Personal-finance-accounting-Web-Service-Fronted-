@@ -1,0 +1,135 @@
+.userPage-userContainer {
+  background-image: url('https://info.winvale.com/hubfs/Do%20I%20Qualify%20for%20Set-Aside%20Contracts%20small.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.userHeader {
+  width: 100vw;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(0, 0, 0, 0.6);
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.userInfoContainer {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;  /* Увеличили отступы, чтобы сделать контейнер больше */
+  border-radius: 8px;
+  margin-top: 60px;
+  z-index: 10;
+  position: relative;
+  width: 100%;  /* Увеличили ширину контейнера до 80% от родителя */
+  max-width: 1000px; /* Устанавливаем максимальную ширину, чтобы контейнер не становился слишком широким на больших экранах */
+  display: flex;
+  flex-direction: column; /* Располагаем элементы по вертикали */
+  align-items: center; /* Выравниваем кнопки по центру */
+  justify-content: center; /* Выравниваем содержимое по центру по вертикали */
+  gap: 5px; /* Добавляем промежуток между кнопками */
+}
+
+.editDataButton {
+  display: inline-block;
+  margin-top: 20px; /* Добавляем отступы между кнопками */
+  padding: 10px 20px;
+  color: white;
+  background-color: rgba(137, 214, 180, 0.715);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  z-index: 10;
+  width: 100%;
+}
+
+.editDataButton:hover {
+  background-color: rgb(65, 184, 130);
+}
+
+.loginButton {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 5px 20px;
+  color: white;
+  background-color: rgba(236, 83, 83, 0.8);
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  z-index: 10;
+}
+
+.loginButton:hover {
+  background-color: rgba(255, 87, 34, 1); 
+}
+
+.userPage-userFooter {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 20px;
+  color: #c7c2c2;
+  padding: 10px 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  z-index: 1;
+}
+
+.FromUserToStartBack-button {
+  background-color: rgba(157, 86, 188, 0.9);
+  color: rgb(255, 255, 255);
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 50px;
+  margin-bottom: -20px;
+  font-size: 18px;
+  transition: background-color 0.3s ease-in-out;
+  z-index: 10;
+}
+
+.FromUserToStartBack-button:hover {
+  background-color: rgba(76, 175, 80, 0.6); 
+}
+
+.userAvatar {
+  font-size: 100px; /* Размер для аватара */
+  margin-bottom: 20px;
+}
+
+.userInfoContainer h1, .userInfoContainer p {
+  display: flex;
+  align-items: center;
+}
+
+.userInfoContainer h1 svg, .userInfoContainer p svg {
+  margin-right: 10px;
+}
+
+.userInfoContainer h1 svg {
+  color: #ffdd57;
+}
+
+/* Убираем случайные иконки */
+.randomIcon {
+  display: none; /* Убираем отображение смайликов с фона */
+}
